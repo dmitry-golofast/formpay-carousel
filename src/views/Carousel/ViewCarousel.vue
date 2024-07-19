@@ -1,5 +1,4 @@
 <template>
-  <!-- <pre>{{ mainStore.personInfo }}</pre> -->
   <div class="carousel">
     <button class="carousel-button" @click="prev">Previous</button>
     <div class="carousel-wrapper">
@@ -84,7 +83,7 @@ mainStore.getVestiPersons();
 .carousel {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 500px;
 
   &__modal-title {
@@ -96,7 +95,7 @@ mainStore.getVestiPersons();
 .carousel-wrapper {
   display: flex;
   overflow: hidden;
-  width: 100%;
+  width: 1000px;
   justify-content: space-between;
 }
 
