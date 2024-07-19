@@ -15,7 +15,7 @@
 import { RouterLink, RouterView } from 'vue-router';
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .wrapper {
   &__span {
     color: rgb(132, 6, 235);

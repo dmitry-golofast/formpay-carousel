@@ -13,8 +13,16 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@chenfengyuan/vue-carousel": "^2.0.0",
+    "@primevue/themes": "^4.0.0",
+    "@vueuse/components": "^10.11.0",
+    "@vueuse/core": "^10.11.0",
+    "dompurify": "^3.1.6",
     "pinia": "^2.1.7",
-    "vue": "^3.4.29",
+    "primeicons": "^7.0.0",
+    "primevue": "^4.0.0",
+    "v-mask": "^2.3.0",
+    "vue": "^3.4.33",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {

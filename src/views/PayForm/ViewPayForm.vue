@@ -1,7 +1,7 @@
 <template>
   <div class="">
     <div class="wrapper">
-      <div id="card" class="credit-card">
+      <div ref="card" class="credit-card">
         <div class="card-front">
           <div class="branding">
             <img src="@/assets/chip.png" class="chip-img" />
@@ -40,11 +40,11 @@
         <div class="date-cvv">
           <div>
             <label for="validity">Срок (Expires On):</label>
-            <input id="validity-input" type="date" />
+            <input id="validity-input" type="month" />
           </div>
           <div>
             <label for="cvv">CVV:</label>
-            <input id="cvv" type="number" placeholder="***" />
+            <input id="cvv" ref="target" type="number" placeholder="***" @click="flip" />
           </div>
         </div>
       </form>
@@ -53,6 +53,23 @@
   </div>
 </template>
 
+<script lang="ts" setup>
+import { ref } from 'vue';
+import { onClickOutside } from '@vueuse/core';
+
+const target = ref<HTMLInputElement>();
+const card = ref<HTMLDivElement>();
+
+const flip = () => {
+  if (!card.value) return;
+  card.value.style.transform = 'rotateY(180deg)';
+};
+
+onClickOutside(target, () => {
+  if (!card.value) return;
+  card.value.style.transform = '';
+});
+</script>
 <style lang="scss" scoped>
 body {
   background-color: #a6c4e8;
